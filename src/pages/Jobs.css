@@ -1,0 +1,96 @@
+.jobs-page {
+  background-color: #f8f9fa;
+  min-height: calc(100vh - 400px);
+}
+
+.jobs-hero {
+  background: linear-gradient(135deg, #0066cc 0%, #004a99 100%);
+  color: white;
+  text-align: center;
+  padding: 60px 0;
+  margin-bottom: 40px;
+}
+
+.jobs-hero h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.jobs-hero p {
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
+
+.filters-panel {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.filters-panel h5 {
+  color: #2c3e50;
+  font-weight: bold;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #0066cc;
+  padding-bottom: 10px;
+}
+
+.filter-group {
+  margin-bottom: 20px;
+}
+
+.filter-group label {
+  font-weight: 600;
+  color: #2c3e50;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.filter-group input,
+.filter-group select {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.filter-group input:focus,
+.filter-group select:focus {
+  border-color: #0066cc;
+  box-shadow: 0 0 0 0.2rem rgba(0, 102, 204, 0.25);
+}
+
+.results-count {
+  color: #666;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.no-results {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 8px;
+}
+
+.no-results i {
+  font-size: 3rem;
+  color: #ddd;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.no-results h4 {
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+.no-results p {
+  color: #999;
+}
+
+@media (max-width: 768px) {
+  .filters-panel {
+    margin-bottom: 30px;
+  }
+}

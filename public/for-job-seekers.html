@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Job Seekers - Infynity Nextgen Solutions Pvt. Ltd.</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="assets/header.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #F5F7FA; color: #333; }
+        a { color: #1F3A8A; text-decoration: none; }
+        a:hover { color: #0F172A; }
+
+        /* ===== NAVIGATION ===== */
+        .navbar { 
+            background: white !important; 
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            padding: 15px 0;
+            border-bottom: 3px solid #1F3A8A;
+        }
+        .navbar-brand { 
+            font-weight: bold; 
+            color: #0F172A !important; 
+            font-size: 22px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .navbar-brand div {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #0F172A 0%, #1F3A8A 100%);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            font-size: 18px;
+        }
+        .nav-link { 
+            color: #555 !important; 
+            font-weight: 500;
+            transition: 0.3s;
+            margin: 0 5px;
+            font-size: 14px;
+        }
+        .nav-link:hover { color: #1F3A8A !important; }
+        .nav-link.active { color: #1F3A8A !important; border-bottom: 3px solid #1F3A8A; }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            background: linear-gradient(135deg, #0F172A 0%, #1F3A8A 100%);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+        .hero-btn {
+            background: white;
+            color: #1F3A8A;
+            border: none;
+            padding: 15px 50px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 16px;
+            display: inline-block;
+        }
+        .hero-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* ===== SECTIONS ===== */
+        .section-padding { padding: 80px 20px; }
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #0F172A;
+            margin-bottom: 50px;
+            font-weight: bold;
+            position: relative;
+            padding-bottom: 20px;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: #1F3A8A;
+            border-radius: 2px;
+        }
+
+        /* ===== STATISTICS SECTION ===== */
+        .stats-section {
+            background: linear-gradient(135deg, #0F172A 0%, #1F3A8A 100%);
+            color: white;
+            padding: 60px 20px;
+        }
+        .stat-box {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #ff6b35;
+        }
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* ===== WHAT WE DO FOR YOU - CARDS ===== */
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 30px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #e0e0e0;
+            height: 100%;
+        }
+        .service-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            background: linear-gradient(135deg, #F5F7FA 0%, #ffffff 100%);
+        }
+        .service-icon {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #0F172A 0%, #1F3A8A 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            margin: 0 auto 20px;
+        }
+        .service-card h4 {
+            font-size: 1.5rem;
+            color: #0F172A;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        .service-card p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        .service-card a {
+            background: #1F3A8A;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 4px;
+            display: inline-block;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        .service-card a:hover {
+            background: #0F172A;
+            color: white;
+        }
+
+        /* ===== IMAGE WITH TEXT SECTION ===== */
+        .content-section {
+            background: white;
+            padding: 80px 20px;
+        }
+        .content-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+        .content-text h2 {
+            font-size: 2.2rem;
+            color: #0F172A;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .content-text p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+        .content-text ul {
+            margin-left: 20px;
+            color: #666;
+            line-height: 2;
+            list-style-type: none;
+        }
+        .content-text ul li::before {
+            content: "✓ ";
+            color: #1F3A8A;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .content-image {
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            min-height: 400px;
+            background: linear-gradient(135deg, #0066cc 0%, #004a99 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .content-row {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .content-text h2 {
+                font-size: 1.8rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+
+        /* ===== INSIGHTS SECTION ===== */
+        .insights-section {
+            background: white;
+            padding: 80px 20px;
+        }
+        .insight-card {
+            background: #F5F7FA;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-bottom: 30px;
+            border: 1px solid #e0e0e0;
+        }
+        .insight-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        .insight-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #0066cc 0%, #004a99 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+        }
+        .insight-content {
+            padding: 25px;
+        }
+        .insight-content h5 {
+            font-size: 1.2rem;
+            color: #0F172A;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        .insight-content p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .insight-content a {
+            color: #1F3A8A;
+            font-weight: 600;
+            display: inline-block;
+            transition: 0.3s;
+        }
+        .insight-content a:hover {
+            color: #0F172A;
+        }
+
+        /* ===== CTA SECTION ===== */
+        .cta-section {
+            background: linear-gradient(135deg, #0F172A 0%, #1F3A8A 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .cta-section h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        .cta-btn {
+            background: white;
+            color: #1F3A8A;
+            border: none;
+            padding: 15px 40px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin: 0 10px;
+            font-size: 16px;
+            display: inline-block;
+        }
+        .cta-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* ===== ALERTS SECTION ===== */
+        .alerts-section {
+            background: white;
+            padding: 80px 20px;
+        }
+        .alerts-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .alerts-image {
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            min-height: 400px;
+            background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: white;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #000000;
+            color: white;
+            padding: 50px 20px;
+            border-top: 3px solid #1F3A8A;
+        }
+        .footer-section {
+            margin-bottom: 30px;
+        }
+        .footer-section h6 {
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        .footer-section a {
+            color: #bbb;
+            display: block;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            transition: 0.3s;
+        }
+        .footer-section a:hover {
+            color: #1F3A8A;
+        }
+        .footer-bottom {
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            margin-top: 30px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            transition: 0.3s;
+        }
+        .social-links a:hover {
+            background: #1F3A8A;
+            color: white;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .alerts-content {
+                grid-template-columns: 1fr;
+            }
+            .section-title { font-size: 2rem; }
+            .stat-number { font-size: 2rem; }
+            .cta-section h2 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- (navigation replaced by unified header at top of file) -->
+
+<!-- ===== HEADER ===== -->
+<div class="header-wrap">
+    <header class="header">
+        <div class="container">
+            <a class="brand" href="index.html">
+                <img src="assets/infinity-logo.svg" alt="Infynity logo">
+                <div>
+                    <span class="title">Infynity</span>
+                    <span class="subtitle">Nextgen Solutions Pvt. Ltd.</span>
+                </div>
+            </a>
+            <nav class="header-nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="jobs.html">Find Jobs</a>
+                <a href="for-job-seekers.html">For Job Seekers</a>
+                <a href="contact.html">Contact</a>
+                
+            </nav>
+        </div>
+        <svg class="header-wave" viewBox="0 0 1200 80" preserveAspectRatio="none"><path d="M0,80 C300,10 900,10 1200,80 L1200,0 L0,0 Z" fill="#1F4FB2" opacity="0.06"></path></svg>
+    </header>
+    <div class="page-watermark">Infynity Nextgen Solutions</div>
+</div>
+                    <div class="stat-label">Branches Nationwide</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== WHAT WE DO FOR YOU ===== -->
+<section class="section-padding" style="background: white;">
+    <div class="container-lg">
+        <h2 class="section-title">What We Do For You</h2>
+        <div class="row">
+            <div class="col-md-6 col-lg-3">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4>Career Success</h4>
+                    <p>Find your way to work with Infynity Nextgen Solutions. Discover benefits, skills training programs, job types, and what to expect when working with us.</p>
+                    <a href="for-job-seekers.html">Read More</a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h4>Skills Training Program</h4>
+                    <p>Access comprehensive skills training programs designed to enhance your professional capabilities and advance your career.</p>
+                    <a href="for-job-seekers.html">Read More</a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h4>Earn Recognition</h4>
+                    <p>Earn achievement medals that appear in your profile as a testament to your success. Recognized as an achiever, communicator, learner, and team player.</p>
+                    <a href="for-job-seekers.html">Read More</a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h4>Specialized Programs</h4>
+                    <p>Access specialized job programs tailored to your needs, including mature worker programs and veterans programs.</p>
+                    <a href="for-job-seekers.html">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== MYPATH PROGRAM SECTION ===== -->
+<section class="content-section">
+    <div class="container-lg">
+        <div class="content-row">
+            <div class="content-text">
+                <h2>Our Professional Development Program</h2>
+                <p>Professional Growth is our global upskilling and development program, focused on supporting and developing careers through personalized advice and training.</p>
+                <p>We provide a sustainable solution to career advancement by offering:</p>
+                <ul>
+                    <li>Personalized career development plans</li>
+                    <li>Industry-specific training courses</li>
+                    <li>Mentorship from experienced professionals</li>
+                    <li>Certification programs to boost your credentials</li>
+                    <li>Continuous learning opportunities</li>
+                    <li>Career coaching and guidance</li>
+                </ul>
+                <a href="for-job-seekers.html" style="background: #0066cc; color: white !important; padding: 12px 30px; border-radius: 4px; display: inline-block; font-weight: 600; margin-top: 20px; transition: 0.3s;" onmouseover="this.style.background='#004a99'" onmouseout="this.style.background='#0066cc'">Learn More</a>
+            </div>
+            <div class="content-image">
+                <i class="fas fa-book-reader"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== JOB SEARCH SECTION ===== -->
+<section class="content-section">
+    <div class="container-lg">
+        <div class="content-row">
+            <div class="content-image">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="content-text">
+                <h2>Create a Profile. We'll Help You Find Your Next Job.</h2>
+                <p>When you're looking for a new job, it's important to find a position that suits your skills and traits – and how you want to work.</p>
+                <p>With Infynity Nextgen Solutions, you get:</p>
+                <ul>
+                    <li>Personalized job recommendations based on your profile</li>
+                    <li>Access to exclusive job opportunities</li>
+                    <li>Direct communication with hiring managers</li>
+                    <li>Career progression tracking and analytics</li>
+                    <li>Interview preparation resources</li>
+                    <li>Salary insights and market data</li>
+                </ul>
+                    <span style="background: #0066cc; color: white !important; padding: 12px 30px; border-radius: 4px; display: inline-block; font-weight: 600; margin-top: 20px; transition: 0.3s;">Create Your Profile</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== JOB SEEKER INSIGHTS ===== -->
+<section class="insights-section">
+    <div class="container-lg">
+        <h2 class="section-title">Job Seeker Insights & Resources</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="insight-card">
+                    <div class="insight-image">
+                        <i class="fas fa-map-signs"></i>
+                    </div>
+                    <div class="insight-content">
+                        <h5>Career Planning Roadmap</h5>
+                        <p>Discover how to plan your career path with passion at the center. Learn strategies to identify your goals and achieve them.</p>
+                        <a href="#">Read More →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="insight-card">
+                    <div class="insight-image">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="insight-content">
+                        <h5>Skills for the Future</h5>
+                        <p>Explore the most in-demand skills in today's job market and learn how to develop them through our training programs.</p>
+                        <a href="#">Read More →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="insight-card">
+                    <div class="insight-image">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="insight-content">
+                        <h5>Career Advancement Tips</h5>
+                        <p>Learn how to advance your career, negotiate better salaries, and navigate workplace challenges effectively.</p>
+                        <a href="#">Read More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== JOB ALERTS SECTION ===== -->
+<section class="alerts-section">
+    <div class="container-lg">
+        <h2 class="section-title">Get Job Alerts Straight to Your Inbox!</h2>
+        <div class="alerts-content">
+            <div>
+                <h3 style="color: #2c3e50; margin-bottom: 20px; font-size: 1.8rem; font-weight: bold;">Never Miss an Opportunity</h3>
+                <p style="color: #666; line-height: 1.8; margin-bottom: 20px;">When you create a profile with Infynity Nextgen Solutions, you can set up customized alerts about jobs you're interested in right on your dashboard.</p>
+                <p style="color: #666; line-height: 1.8; margin-bottom: 30px;">Our intelligent notification system sends you matching opportunities daily, ensuring you never miss a job that aligns with your skills and career goals.</p>
+                <ul style="margin-left: 20px; color: #666; line-height: 2; list-style-type: none;">
+                    <li><i class="fas fa-check" style="color: #0066cc; margin-right: 10px;"></i> Daily job matching alerts</li>
+                    <li><i class="fas fa-check" style="color: #0066cc; margin-right: 10px;"></i> Customize by industry and location</li>
+                    <li><i class="fas fa-check" style="color: #0066cc; margin-right: 10px;"></i> Set salary and experience preferences</li>
+                    <li><i class="fas fa-check" style="color: #0066cc; margin-right: 10px;"></i> One-click apply to opportunities</li>
+                    <li><i class="fas fa-check" style="color: #0066cc; margin-right: 10px;"></i> Track application status in real-time</li>
+                </ul>
+                <span style="background: #0066cc; color: white !important; padding: 15px 40px; border-radius: 4px; display: inline-block; font-weight: 600; margin-top: 30px; transition: 0.3s;">Set Up Your Alerts</span>
+            </div>
+            <div class="alerts-image">
+                <i class="fas fa-bell"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CTA SECTION ===== -->
+<section class="cta-section">
+    <div class="container-lg">
+        <h2>Ready to Take the Next Step in Your Career?</h2>
+        <p>Join thousands of professionals who have found their dream jobs with Infynity Nextgen Solutions</p>
+        <span class="cta-btn">Create Your Profile Now</span>
+        <a href="jobs.html" class="cta-btn" style="background: transparent; border: 2px solid white; color: white;">Browse All Jobs</a>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+    <div class="container-lg">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="footer-section">
+                    <h6><i class="fas fa-user-tie"></i> For Job Seekers</h6>
+                    <a href="for-job-seekers.html">For Job Seekers</a>
+                    <a href="jobs.html">Find Jobs</a>
+                    <a href="for-job-seekers.html">Job Seeker Resources</a>
+                    <a href="contact.html">Support</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="footer-section">
+                    <h6><i class="fas fa-building"></i> For Employers</h6>
+                    <a href="#">Post a Job</a>
+                    <a href="#">Our Solutions</a>
+                    <a href="#">Browse Talent</a>
+                    <a href="#">Pricing</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="footer-section">
+                    <h6><i class="fas fa-info-circle"></i> Company</h6>
+                    <a href="about.html">About Us</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Awards</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="footer-section">
+                    <h6><i class="fas fa-share-alt"></i> Follow Us</h6>
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Infynity Nextgen Solutions Pvt. Ltd. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

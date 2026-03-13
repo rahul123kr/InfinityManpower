@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobs - Infynity Nextgen Solutions</title>
+        <title>Jobs - Infynity Nextgen Solutions Pvt. Ltd.</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="assets/header.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #F5F7FA; }
+        
+        /* Navigation */
+        .navbar { background: #0F172A !important; box-shadow: 0 2px 10px rgba(0,0,0,0.1); border-bottom: 3px solid #1F3A8A; }
+        .navbar-brand { font-weight: bold; color: #fff !important; font-size: 22px; }
+        .nav-link { color: #ccc !important; transition: 0.3s; margin: 0 10px; }
+        .nav-link:hover { color: #1F3A8A !important; }
+        .nav-link.active { color: #1F3A8A !important; border-bottom: 2px solid #1F3A8A; }
+        
+        /* Hero Section */
+        .hero { background: linear-gradient(135deg, #0F172A 0%, #1F3A8A 100%); color: white; padding: 80px 20px; text-align: center; }
+        .hero h1 { font-size: 3rem; font-weight: bold; margin-bottom: 20px; }
+        .hero p { font-size: 1.3rem; opacity: 0.9; }
+        
+        /* Content */
+        .content { padding: 60px 20px; }
+        .section-title {
+            font-size: 2.5rem; color: #0F172A; margin: 40px 0 30px;
+            font-weight: bold; position: relative; padding-bottom: 15px;
+        }
+        .section-title::after {
+            content: ''; position: absolute; bottom: 0; left: 0;
+            width: 60px; height: 4px; background: #1F3A8A; border-radius: 2px;
+        }
+        
+        .job-card {
+            background: white; padding: 25px; border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 25px;
+            border-left: 5px solid #1F3A8A; transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .job-title { font-size: 1.3rem; font-weight: bold; color: #0F172A; margin-bottom: 10px; }
+        .job-company { color: #1F3A8A; font-weight: bold; }
+        .job-meta { color: #666; font-size: 0.95rem; margin: 8px 0; }
+        .job-description { color: #555; line-height: 1.6; margin: 15px 0; }
+        .job-tags { margin: 15px 0; }
+        .job-tag {
+            display: inline-block; background: #e8f2ff; color: #1F3A8A;
+            padding: 5px 12px; border-radius: 20px; font-size: 0.85rem;
+            margin-right: 8px; margin-bottom: 8px;
+        }
+        
+        .filters { background: white; padding: 20px; border-radius: 8px; margin-bottom: 30px; }
+        
+        .pagination { text-align: center; margin-top: 40px; }
+        
+        /* Footer */
+        footer { background: #000000; color: white; padding: 40px 20px; text-align: center; border-top: 3px solid #1F3A8A; }
+        footer a { color: #1F3A8A; text-decoration: none; }
+        
+        .container { max-width: 1200px; margin: 0 auto; }
+        .btn-primary { background-color: #1F3A8A; border: none; }
+        .btn-primary:hover { background-color: #0F172A; }
+    </style>
+</head>
+<body>
+        <!-- ===== HEADER ===== -->
+        <div class="header-wrap">
+            <header class="header">
+                <div class="container">
+                    <a class="brand" href="index.html">
+                        <img src="assets/infinity-logo.svg" alt="Infynity logo">
+                        <div>
+                            <span class="title">Infynity</span>
+                            <span class="subtitle">Nextgen Solutions Pvt. Ltd.</span>
+                        </div>
+                    </a>
+                    <nav class="header-nav">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About Us</a>
+                        <a href="jobs.html">Find Jobs</a>
+                        <a href="for-job-seekers.html">For Job Seekers</a>
+                        <a href="contact.html">Contact</a>
+                        
+                    </nav>
+                </div>
+                <svg class="header-wave" viewBox="0 0 1200 80" preserveAspectRatio="none"><path d="M0,80 C300,10 900,10 1200,80 L1200,0 L0,0 Z" fill="#1F4FB2" opacity="0.06"></path></svg>
+            </header>
+            <div class="page-watermark">Infynity Nextgen Solutions</div>
+        </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="container">
+            <h1>Job Opportunities</h1>
+            <p>Browse Thousands of Verified Job Listings</p>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <div class="container">
+            <!-- Search and Filters -->
+            <div class="filters">
+                <h5 style="margin-bottom: 20px;"><i class="fas fa-filter"></i> Search & Filter</h5>
+                <div class="row g-3">
+                    <div class="col-md-3">
+                        <input type="text" class="form-control" placeholder="Job title or keyword">
+                    </div>
+                    <div class="col-md-3">
+                        <select class="form-select">
+                            <option selected>All Locations</option>
+                            <option>Islamabad</option>
+                            <option>Karachi</option>
+                            <option>Lahore</option>
+                            <option>Rawalpindi</option>
+                            <option>Multan</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <select class="form-select">
+                            <option selected>All Industries</option>
+                            <option>IT & Technology</option>
+                            <option>Healthcare</option>
+                            <option>Finance & Banking</option>
+                            <option>Retail & E-commerce</option>
+                            <option>Education</option>
+                            <option>Manufacturing</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <button class="btn btn-primary w-100"><i class="fas fa-search"></i> Search Jobs</button>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-title">Featured Job Openings</h2>
+
+            <!-- Job 1 -->
+            <div class="job-card">
+                <div class="job-title"><i class="fas fa-briefcase"></i> Senior Software Engineer</div>
+                <div class="job-company"><i class="fas fa-building"></i> Tech Innovations Ltd</div>
+                <div class="job-meta"><i class="fas fa-map-marker-alt"></i> Islamabad, Pakistan</div>
+                <div class="job-meta"><i class="fas fa-money-bill"></i> 1,50,000 - 2,00,000 PKR/month</div>
+                <div class="job-description">
+                    We are looking for an experienced Senior Software Engineer to join our dynamic team. You will work on cutting-edge 
+                    technologies and lead development projects. Requirements: 5+ years experience, expertise in cloud technologies, 
+                    and strong problem-solving skills.
+                </div>
+                <div class="job-tags">
+                    <span class="job-tag">Full-time</span>
+                    <span class="job-tag">Senior Level</span>
+                    <span class="job-tag">Remote Allowed</span>
+                </div>
+                <button class="btn btn-primary btn-sm"><i class="fas fa-paper-plane"></i> Apply Now</button>
+            </div>
+
+            <!-- Job 2 -->
+            <div class="job-card">
+                <div class="job-title"><i class="fas fa-briefcase"></i> Full Stack Developer</div>
+                <div class="job-company"><i class="fas fa-building"></i> Digital Solutions Inc</div>
+                <div class="job-meta"><i class="fas fa-map-marker-alt"></i> Karachi, Pakistan</div>
+                <div class="job-meta"><i class="fas fa-money-bill"></i> 80,000 - 1,20,000 PKR/month</div>
+                <div class="job-description">
+                    Join our creative team as a Full Stack Developer. You'll work with React, Node.js, and MongoDB to build amazing 
+                    web applications. Ideal candidate should have 2+ years experience and a passion for learning new technologies.
+                </div>
+                <div class="job-tags">
+                    <span class="job-tag">Full-time</span>
+                    <span class="job-tag">Mid Level</span>
+                    <span class="job-tag">On-site</span>
+                </div>
+                <button class="btn btn-primary btn-sm"><i class="fas fa-paper-plane"></i> Apply Now</button>
+            </div>
+
+            <!-- Job 3 -->
+            <div class="job-card">
+                <div class="job-title"><i class="fas fa-briefcase"></i> Marketing Manager</div>
+                <div class="job-company"><i class="fas fa-building"></i> Creative Agency Partners</div>
+                <div class="job-meta"><i class="fas fa-map-marker-alt"></i> Lahore, Pakistan</div>
+                <div class="job-meta"><i class="fas fa-money-bill"></i> 1,00,000 - 1,50,000 PKR/month</div>
+                <div class="job-description">
+                    Lead our marketing initiatives and grow our brand presence. This role involves strategic planning, campaign management, 
+                    and team leadership. We need someone with 4+ years marketing experience and proven track record of successful campaigns.
+                </div>
+                <div class="job-tags">
+                    <span class="job-tag">Full-time</span>
+                    <span class="job-tag">Manager Level</span>
+                    <span class="job-tag">On-site</span>
+                </div>
+                <button class="btn btn-primary btn-sm"><i class="fas fa-paper-plane"></i> Apply Now</button>
+            </div>
+
+            <!-- Job 4 -->
+            <div class="job-card">
+                <div class="job-title"><i class="fas fa-briefcase"></i> Data Analyst</div>
+                <div class="job-company"><i class="fas fa-building"></i> Analytics Solutions Co</div>
+                <div class="job-meta"><i class="fas fa-map-marker-alt"></i> Islamabad, Pakistan</div>
+                <div class="job-meta"><i class="fas fa-money-bill"></i> 70,000 - 1,00,000 PKR/month</div>
+                <div class="job-description">
+                    Help us make data-driven decisions. We need a skilled Data Analyst with expertise in SQL, Python, and Tableau. 
+                    You'll analyze complex datasets and create insights that drive business strategy. 2+ years experience required.
+                </div>
+                <div class="job-tags">
+                    <span class="job-tag">Full-time</span>
+                    <span class="job-tag">Mid Level</span>
+                    <span class="job-tag">Remote</span>
+                </div>
+                <button class="btn btn-primary btn-sm"><i class="fas fa-paper-plane"></i> Apply Now</button>
+            </div>
+
+            <!-- Job 5 -->
+            <div class="job-card">
+                <div class="job-title"><i class="fas fa-briefcase"></i> Business Development Executive</div>
+                <div class="job-company"><i class="fas fa-building"></i> Enterprise Growth Corp</div>
+                <div class="job-meta"><i class="fas fa-map-marker-alt"></i> Rawalpindi, Pakistan</div>
+                <div class="job-meta"><i class="fas fa-money-bill"></i> 60,000 - 90,000 PKR/month</div>
+                <div class="job-description">
+                    Identify and pursue new business opportunities. Responsibilities include client relationship management, sales 
+                    strategy development, and revenue growth. Looking for someone with 3+ years in B2B sales or business development.
+                </div>
+                <div class="job-tags">
+                    <span class="job-tag">Full-time</span>
+                    <span class="job-tag">Mid Level</span>
+                    <span class="job-tag">On-site</span>
+                </div>
+                <button class="btn btn-primary btn-sm"><i class="fas fa-paper-plane"></i> Apply Now</button>
+            </div>
+
+            <!-- Job 6 -->
+            <div class="job-card">
+                <div class="job-title"><i class="fas fa-briefcase"></i> Senior HR Specialist</div>
+                <div class="job-company"><i class="fas fa-building"></i> Human Resources Solutions</div>
+                <div class="job-meta"><i class="fas fa-map-marker-alt"></i> Karachi, Pakistan</div>
+                <div class="job-meta"><i class="fas fa-money-bill"></i> 90,000 - 1,30,000 PKR/month</div>
+                <div class="job-description">
+                    Join our HR team to manage recruitment, employee relations, and compliance. You'll play a key role in building 
+                    and maintaining our company culture. Required: 5+ years HR experience and knowledge of Pakistani labor laws.
+                </div>
+                <div class="job-tags">
+                    <span class="job-tag">Full-time</span>
+                    <span class="job-tag">Senior Level</span>
+                    <span class="job-tag">On-site</span>
+                </div>
+                <button class="btn btn-primary btn-sm"><i class="fas fa-paper-plane"></i> Apply Now</button>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- CTA -->
+            <div style="background: linear-gradient(135deg, #00a678 0%, #006b4f 100%); color: white; padding: 40px; border-radius: 8px; margin-top: 50px; text-align: center;">
+                <h4><i class="fas fa-star"></i> Find Your Perfect Match Today</h4>
+                <p style="margin: 15px 0; opacity: 0.9;">Apply to multiple positions and get matched with your ideal job.</p>
+                <button class="btn btn-light"><i class="fas fa-paper-plane"></i> Start Applying</button>
+            </div>
+
+            <!-- Info Box -->
+            <div style="background: #e8f5f0; padding: 30px; border-radius: 8px; margin-top: 30px; border-left: 5px solid #00a678;">
+                <h5><i class="fas fa-lightbulb"></i> Need Help with Your Job Search?</h5>
+                <p style="margin: 15px 0; color: #555;">
+                    Our career consultants are here to assist you with resume optimization, interview preparation, and career guidance.
+                </p>
+                <a href="for-job-seekers.html" class="btn btn-primary btn-sm" style="margin-right: 10px;">View Resources</a>
+                <a href="contact.html" class="btn btn-outline-primary btn-sm">Contact Us</a>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Infynity Nextgen Solutions Pvt. Ltd. All rights reserved.</p>
+        <p>
+            <a href="index.html">Home</a> | 
+            <a href="about.html">About</a> | 
+            <a href="for-job-seekers.html">Resources</a> | 
+            <a href="jobs.html">Jobs</a> | 
+            <a href="contact.html">Contact</a>
+        </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

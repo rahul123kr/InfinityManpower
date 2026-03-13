@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Infynity Nextgen Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="assets/header.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f8f9fa; }
+        
+        /* Navigation */
+        .navbar { background: #2c3e50 !important; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .navbar-brand { font-weight: bold; color: #fff !important; font-size: 22px; }
+        .nav-link { color: #ccc !important; transition: 0.3s; margin: 0 10px; }
+        .nav-link:hover { color: #0066cc !important; }
+        .nav-link.active { color: #0066cc !important; border-bottom: 2px solid #0066cc; }
+        
+        /* Hero Section */
+        .hero { background: linear-gradient(135deg, #ff6b35 0%, #cc5a2a 100%); color: white; padding: 80px 20px; text-align: center; }
+        .hero h1 { font-size: 3rem; font-weight: bold; margin-bottom: 20px; }
+        .hero p { font-size: 1.3rem; opacity: 0.9; }
+        
+        /* Content */
+        .content { padding: 60px 20px; background: white; }
+        .section-title {
+            font-size: 2.5rem; color: #2c3e50; margin: 40px 0 30px;
+            font-weight: bold; position: relative; padding-bottom: 15px;
+        }
+        .section-title::after {
+            content: ''; position: absolute; bottom: 0; left: 0;
+            width: 60px; height: 4px; background: #ff6b35; border-radius: 2px;
+        }
+        
+        .service-card {
+            background: white; padding: 30px; border-radius: 8px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 30px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 5px solid #ff6b35;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .service-icon {
+            font-size: 3rem; color: #ff6b35; margin-bottom: 20px;
+        }
+        .service-card h4 {
+            color: #2c3e50; font-weight: bold; margin-bottom: 15px;
+        }
+        .service-card p {
+            color: #555; line-height: 1.8; margin-bottom: 15px;
+        }
+        .service-features {
+            background: #f8f9fa; padding: 15px; border-radius: 4px;
+            margin: 15px 0;
+        }
+        .service-features li {
+            color: #555; margin-bottom: 8px;
+        }
+        
+        /* Footer */
+        footer { background: #2c3e50; color: white; padding: 40px 20px; text-align: center; }
+        footer a { color: #ff6b35; text-decoration: none; }
+        
+        .container { max-width: 1200px; margin: 0 auto; }
+        .btn-primary { background-color: #ff6b35; border: none; }
+        .btn-primary:hover { background-color: #cc5a2a; }
+    </style>
+</head>
+<body>
+        <!-- ===== HEADER ===== -->
+        <div class="header-wrap">
+            <header class="header">
+                <div class="container">
+                    <a class="brand" href="index.html">
+                        <img src="assets/infinity-logo.svg" alt="Infynity logo">
+                        <div>
+                            <span class="title">Infynity</span>
+                            <span class="subtitle">Nextgen Solutions Pvt. Ltd.</span>
+                        </div>
+                    </a>
+                    <nav class="header-nav">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About Us</a>
+                        <a href="jobs.html">Find Jobs</a>
+                        <a href="for-job-seekers.html">For Job Seekers</a>
+                        <a href="contact.html">Contact</a>
+                        
+                    </nav>
+                </div>
+                <svg class="header-wave" viewBox="0 0 1200 80" preserveAspectRatio="none"><path d="M0,80 C300,10 900,10 1200,80 L1200,0 L0,0 Z" fill="#1F4FB2" opacity="0.06"></path></svg>
+            </header>
+            <div class="page-watermark">Infynity Nextgen Solutions</div>
+        </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="container">
+            <h1>Our Services</h1>
+            <p>Comprehensive Recruitment Solutions for Your Success</p>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <div class="container">
+            <p style="text-align: center; font-size: 1.1rem; color: #555; margin-bottom: 50px;">
+                We offer a comprehensive range of recruitment and staffing services designed to meet the unique needs of job seekers and employers alike.
+            </p>
+
+            <h2 class="section-title">For Job Seekers</h2>
+            
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h4>Job Search & Matching</h4>
+                        <p>
+                            Browse thousands of verified job listings and get matched with positions that align with your skills, 
+                            experience, and career aspirations.
+                        </p>
+                        <div class="service-features">
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li><i class="fas fa-check" style="color: #ff6b35;"></i> Advanced filtering options</li>
+                                <li><i class="fas fa-check" style="color: #ff6b35;"></i> Personalized job recommendations</li>
+                                <li><i class="fas fa-check" style="color: #ff6b35;"></i> Real-time notifications</li>
+                                <li><i class="fas fa-check" style="color: #ff6b35;"></i> One-click job applications</li>
+                            </ul>
+                        </div>
+                        <a href="jobs.html" class="btn btn-primary btn-sm">Browse Jobs Now</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h4>Career Development & Training</h4>
+                        <p>
+                            Enhance your skills and prepare for your next career opportunity with our comprehensive training programs 
+                            and professional development resources.
+                        </p>
+                        <div class="service-features">
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li><i class="fas fa-check" style="color: #ff6b35;"></i> Online certification courses</li>
+                                <li><i class="fas fa-check" style="color: #ff6b35;"></i> Interview preparation</li>
+                                <li><i class="fas fa-check" style="color: #ff6b35;"></i> Resume writing support</li>
+                                <li><i class="fas fa-check" style="color: #ff6b35;"></i> Skill development modules</li>
+                            </ul>
+                        </div>
+                        <a href="contact.html" class="btn btn-primary btn-sm">Get Started</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>Career Consulting</h4>
+                        <p>
+                            Get professional guidance from our experienced career consultants to make informed decisions about your 
+                            career path and growth strategy.
+                        </p>
+                        <div class="service-features">
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li><i class="fas fa-check" style="color: #ff6b35;"></i> One-on-one consultation</li>
+                                <li><i class="fas fa-check" style="color: #ff6b35;"></i> Career path planning</li>
+                                <li><i class="fas fa-check" style="color: #ff6b35;"></i> Salary negotiation support</li>
+                                <li><i class="fas fa-check" style="color: #ff6b35;"></i> Industry insights</li>
+                            </ul>
+                        </div>
+                        <a href="contact.html" class="btn btn-primary btn-sm">Book Consultation</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h4>Professional Networking</h4>
+                        <p>
+                            Connect with industry professionals, attend networking events, and expand your professional network to 
+                            unlock new opportunities.
+                        </p>
+                        <div class="service-features">
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li><i class="fas fa-check" style="color: #ff6b35;"></i> Industry events & webinars</li>
+                                <li><i class="fas fa-check" style="color: #ff6b35;"></i> Professional community access</li>
+                                <li><i class="fas fa-check" style="color: #ff6b35;"></i> Mentor connections</li>
+                                <li><i class="fas fa-check" style="color: #ff6b35;"></i> Peer networking groups</li>
+                            </ul>
+                        </div>
+                        <a href="contact.html" class="btn btn-primary btn-sm">Join Community</a>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-title" style="margin-top: 60px;">For Employers</h2>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-user-plus"></i>
+                        </div>
+                        <h4>Talent Recruitment</h4>
+                        <p>
+                            Access our database of qualified professionals and post unlimited job listings to reach the right candidates 
+                            for your organization.
+                        </p>
+                        <div class="service-features">
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li><i class="fas fa-check" style="color: #ff6b35;"></i> Unlimited job postings</li>
+                                <li><i class="fas fa-check" style="color: #ff6b35;"></i> Candidate filtering tools</li>
+                                <li><i class="fas fa-check" style="color: #ff6b35;"></i> ATS integration</li>
+                                <li><i class="fas fa-check" style="color: #ff6b35;"></i> Bulk resume uploads</li>
+                            </ul>
+                        </div>
+                        <a href="contact.html" class="btn btn-primary btn-sm">Post a Job</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4>Staffing Solutions</h4>
+                        <p>
+                            Get full-time, part-time, or contract staffing solutions tailored to your specific business needs and workforce 
+                            requirements.
+                        </p>
+                        <div class="service-features">
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li><i class="fas fa-check" style="color: #ff6b35;"></i> Permanent placement</li>
+                                <li><i class="fas fa-check" style="color: #ff6b35;"></i> Temporary staffing</li>
+                                <li><i class="fas fa-check" style="color: #ff6b35;"></i> Contract hiring</li>
+                                <li><i class="fas fa-check" style="color: #ff6b35;"></i> Executive search</li>
+                            </ul>
+                        </div>
+                        <a href="contact.html" class="btn btn-primary btn-sm">Hire Now</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>HR Consulting</h4>
+                        <p>
+                            Get expert advice on recruitment strategy, employee management, organizational development, and HR best practices 
+                            from our experienced consultants.
+                        </p>
+                        <div class="service-features">
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li><i class="fas fa-check" style="color: #ff6b35;"></i> Recruitment strategy</li>
+                                <li><i class="fas fa-check" style="color: #ff6b35;"></i> Organizational development</li>
+                                <li><i class="fas fa-check" style="color: #ff6b35;"></i> Compensation analysis</li>
+                                <li><i class="fas fa-check" style="color: #ff6b35;"></i> HR audits</li>
+                            </ul>
+                        </div>
+                        <a href="contact.html" class="btn btn-primary btn-sm">Request Consultation</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h4>International Placement</h4>
+                        <p>
+                            Expand your reach beyond borders with our international placement services connecting you with global talent 
+                            and opportunities.
+                        </p>
+                        <div class="service-features">
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li><i class="fas fa-check" style="color: #ff6b35;"></i> Cross-border recruitment</li>
+                                <li><i class="fas fa-check" style="color: #ff6b35;"></i> Visa assistance</li>
+                                <li><i class="fas fa-check" style="color: #ff6b35;"></i> Global talent pool</li>
+                                <li><i class="fas fa-check" style="color: #ff6b35;"></i> Relocation support</li>
+                            </ul>
+                        </div>
+                        <a href="contact.html" class="btn btn-primary btn-sm">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: #fff3cd; padding: 30px; border-radius: 8px; margin-top: 50px; border-left: 5px solid #ff6b35;">
+                <h4><i class="fas fa-info-circle"></i> Interested in Our Services?</h4>
+                <p style="margin: 15px 0; color: #555;">Contact our team to learn more about how we can help you achieve your recruitment goals.</p>
+                <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Infynity Nextgen Solutions Pvt. Ltd. All rights reserved.</p>
+        <p>
+            <a href="index.html">Home</a> | 
+            <a href="about.html">About</a> | 
+            <a href="services.html">Services</a> | 
+            <a href="jobs.html">Jobs</a> | 
+            <a href="contact.html">Contact</a>
+        </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

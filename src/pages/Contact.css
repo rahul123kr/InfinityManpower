@@ -1,0 +1,152 @@
+.contact-page {
+  background-color: #f8f9fa;
+}
+
+.contact-hero {
+  background: linear-gradient(135deg, #0066cc 0%, #004a99 100%);
+  color: white;
+  text-align: center;
+  padding: 80px 0;
+  margin-bottom: 60px;
+}
+
+.contact-hero h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.contact-hero p {
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
+
+.contact-info {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.contact-info h4 {
+  color: #2c3e50;
+  font-weight: bold;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #0066cc;
+  padding-bottom: 15px;
+}
+
+.info-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.info-item i {
+  font-size: 1.5rem;
+  color: #0066cc;
+  width: 25px;
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+.info-item h6 {
+  color: #2c3e50;
+  font-weight: bold;
+  margin: 0 0 5px 0;
+}
+
+.info-item p {
+  color: #666;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.contact-info h5 {
+  color: #2c3e50;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #0066cc 0%, #004a99 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+.social-link:hover {
+  transform: scale(1.1);
+}
+
+.contact-form-container {
+  background: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.contact-form-container h3 {
+  color: #2c3e50;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.form-label {
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.form-control {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+
+.form-control:focus {
+  border-color: #0066cc;
+  box-shadow: 0 0 0 0.2rem rgba(0, 102, 204, 0.25);
+  color: #333;
+}
+
+.success-message {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: white;
+  border-radius: 8px;
+}
+
+.success-message i {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.success-message h5 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.success-message p {
+  margin: 0;
+  opacity: 0.95;
+}
+
+@media (max-width: 768px) {
+  .contact-form-container {
+    padding: 25px;
+  }
+}
